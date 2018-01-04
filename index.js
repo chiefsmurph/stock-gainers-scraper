@@ -14,7 +14,7 @@ const scrapeGainers = async () => {
 
 new CronJob('31 06 * * 1-5', () => {
 
-  [0, 3, 5, 10, 20, 30, 60].forEach(min => {
+  [0, 3, 5, 10, 20, 30, 60, 75, 90, 105, 120, 180].forEach(min => {
     setTimeout(async () => {
       console.log(`scraping gainers for 6:31am + ${min} minutes`);
       await scrapeGainers();
