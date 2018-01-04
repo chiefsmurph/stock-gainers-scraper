@@ -1,0 +1,22 @@
+{
+  "name": "stock-gainers-scraper",
+  "version": "1.0.0",
+  "description": "puppeteer scraping yahoo finance biggest gainers stocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiefsmurph/stock-gainers-scraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiefsmurph/stock-gainers-scraper/issues"
+  },
+  "homepage": "https://github.com/chiefsmurph/stock-gainers-scraper#readme",
+  "dependencies": {
+    "puppeteer": "^0.13.0"
+  }
+}
