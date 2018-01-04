@@ -13,13 +13,13 @@ const scrapeYahooFinance = async (minOffset) => {
   });
   await page.goto('https://finance.yahoo.com/most-active');
   await page.click('#scr-res-table thead th:nth-child(6)'); // %change th
-  await page.waitFor(200);
+  await page.waitFor(1000);
   await page.click('#scr-res-table thead th:nth-child(6)'); // order high to low
   await page.screenshot({
     path: `./screenshots/most-active/${dateStr} (+${minOffset}).png`,
     fullPage: true
   });
-  await page.goto('https://finance.yahoo.com/trending');
+  await page.goto('https://finance.yahoo.com/trending-tickers');
   await page.screenshot({
     path: `./screenshots/trending/${dateStr} (+${minOffset}).png`,
     fullPage: true
@@ -27,7 +27,7 @@ const scrapeYahooFinance = async (minOffset) => {
   await browser.close();
 };
 
-new CronJob('14 00 * * 1-5', () => {
+new CronJob('31 06 * * 1-5', () => {
 
   [0, 3, 5, 10, 20, 30, 60, 75, 90, 105, 120, 180].forEach(min => {
     setTimeout(async () => {
